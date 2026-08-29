@@ -4,6 +4,14 @@
 - The default branch in this repo is `dev`.
 - Local `main` ref may not exist; use `dev` or `origin/dev` for diffs.
 
+## Cross-Repo Documentation Boundary
+
+- This repository owns its own `docs/`, `wiki/`, `invariants/`, and `boards/` artifacts.
+- The Rust product lives in `$HOME/repos/opencode-modded-rust` and owns its own `docs/`, `wiki/`, `invariants/`, and `boards/` artifacts.
+- The Rust repo may reference files in this repo by explicit path.
+- Reference by path, not by inheritance: documents in this repo are not automatically authoritative in the Rust repo.
+- If a rule, invariant, or plan must constrain the Rust product, it should be restated in `$HOME/repos/opencode-modded-rust`.
+
 ## Branch Names
 
 Use a short branch name of at most three words, separated by hyphens. Do not use slashes or type prefixes such as `feat/` or `fix/`.
